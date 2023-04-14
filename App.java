@@ -1,8 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         //ESCOLHER FUNCIONARIO ANTES
         boolean encerrado = false;
         while (!encerrado) {
@@ -14,6 +16,9 @@ public class App {
             System.out.println("4: Pesquisar equipamento pela descrição");
             //Fazer as outras
             System.out.println("5: Encerrar Programa");
+            int escolha = sc.nextInt();
+
+            if (escolha==5) encerrado=true;
 
 
         }
