@@ -1,5 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Equipamento {
     private Long id;
@@ -51,4 +53,20 @@ public class Equipamento {
                 Status.ABERTO, null);
     }
 
+    public boolean pesquisarPorDescricao(String descricao) {
+        if (this.descricao.equalsIgnoreCase(descricao)) {
+            return true;
+        }
+        return false;
+    }
+
+    public Equipamento buscarEquipamentoPorDescricao(String descricao, List<Equipamento> listaEquipamentos) {
+        for (Equipamento equipamento : listaEquipamentos) {
+            if (equipamento.pesquisarPorDescricao(descricao)) {
+                return equipamento;
+            }
+        }
+        return null;
+    }
+    
 }
