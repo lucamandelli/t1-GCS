@@ -5,15 +5,44 @@ import java.util.List;
 public class ListaChamados {
     static List<Chamado> chamadosList = new ArrayList<>();
 
-    public ListaChamados() {
+    private ListaChamados() {
         // empty constructor for consistency
     }
 
-    public boolean contains(Chamado chamado){
+    public static void removeByEquipamento(long id) {
+        chamadosList.removeIf(chamado -> chamado.getEquipamento().getId().equals(id));
+    }
+
+    public static void removeByDescricao(String descricao) {
+        chamadosList.removeIf(chamado -> chamado.getDescricao().equals(descricao));
+    }
+
+    public static void removeByRequisitante(long id) {
+        chamadosList.removeIf(chamado -> chamado.getRequisitante().getId().equals(id));
+    }
+
+    public static void removeByResponsavel(long id){
+        chamadosList.removeIf(chamado -> chamado.getResponsavel().getId().equals(id));
+    }
+
+    public static void removeByDataSolicitacao(LocalDateTime dataSolicitacao){
+        chamadosList.removeIf(chamado -> chamado.getDataSolicitacao().equals(dataSolicitacao));
+    }
+
+    public static void removeByStatus(String status){
+        chamadosList.removeIf(chamado -> chamado.getStatus().equals(Status.valueOf(status)));
+    }
+
+    public static void removeByTextoResolucao(String textoResolucao){
+        chamadosList.removeIf(chamado -> chamado.getTextoResolucao().equals(textoResolucao));
+    }
+
+    // standard methods
+    public static boolean contains(Chamado chamado){
         return chamadosList.contains(chamado);
     }
 
-    public void remove(Chamado chamado){
+    public static void remove(Chamado chamado){
         chamadosList.remove(chamado);
     }
 
@@ -27,7 +56,7 @@ public class ListaChamados {
         add(chamado);
     }
 
-    public List<Chamado> getchamadosList() {
+    public static List<Chamado> getChamadosList() {
         return chamadosList;
     }
 }
