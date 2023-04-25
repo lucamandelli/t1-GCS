@@ -51,7 +51,7 @@ public class MenuListaChamados {
     private void removeByDataSolicitacao(){
         Scanner scanner = new Scanner(System.in);
         if(scanner.hasNextLine()){
-            ListaChamados.removeByDataSolicitacao(LocalDateTime.parse(scanner.nextLine()));
+            ListaChamados.removeByDataSolicitacao(scanner.nextLine());
         }
     }
 

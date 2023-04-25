@@ -25,8 +25,8 @@ public class ListaChamados {
         chamadosList.removeIf(chamado -> chamado.getResponsavel().getId().equals(id));
     }
 
-    public static void removeByDataSolicitacao(LocalDateTime dataSolicitacao){
-        chamadosList.removeIf(chamado -> chamado.getDataSolicitacao().equals(dataSolicitacao));
+    public static void removeByDataSolicitacao(String dataSolicitacao){
+        chamadosList.removeIf(chamado -> chamado.getDataSolicitacao().equals(LocalDateTime.parse(dataSolicitacao)));
     }
 
     public static void removeByStatus(String status){
