@@ -7,7 +7,7 @@ public class App {
 
         //ESCOLHER FUNCIONARIO ANTES
         boolean encerrado = false;
-        while (!encerrado) {
+        do {
             //SOMENTE FUNCIONARIOS SUPORTE DEVEM TER ACESSO A ALGUMAS FUNCIONALIADADES
             System.out.println("Escolher Funcionalidade");
             System.out.println("1: Abrir novo chamado");
@@ -15,15 +15,14 @@ public class App {
             System.out.println("3: Mover equipamento");
             System.out.println("4: Pesquisar equipamento pela descrição");
             //Fazer as outras
-            System.out.println("5: Encerrar Programa");
+            System.out.println("0: Encerrar Programa");
             int escolha = sc.nextInt();
 
-            if (escolha==5) encerrado=true;
-
-
-        }
-
-
-
+            switch (escolha) {
+                case 0: encerrado = true; break;
+                //case de outras funcionalidades
+                default: System.out.println("Entrada inválida. Tente novamente.");
+            }
+        } while (!encerrado);
     }
 }
