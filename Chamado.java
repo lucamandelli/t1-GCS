@@ -9,13 +9,13 @@ public class Chamado {
 
     private String textoResolucao;
 
-
     private LocalDateTime dataSolicitacao;
+
+    private Prioridade prioridade;
 
     private Status status;
 
-    public Chamado(Equipamento equipamento, String descricao, Funcionario requisitante, Funcionario responsavel, LocalDateTime dataSolicitacao, Status status,
-                   String textoResolucao) {
+    public Chamado(Equipamento equipamento, String descricao, Funcionario requisitante, Funcionario responsavel, LocalDateTime dataSolicitacao, Status status, String textoResolucao, Prioridade prioridade) {
         this.equipamento = equipamento;
         this.descricao = descricao;
         this.requisitante = requisitante;
@@ -23,7 +23,8 @@ public class Chamado {
         this.dataSolicitacao = dataSolicitacao;
         this.status = status;
         this.textoResolucao = textoResolucao;
-        ListaChamados.add(equipamento, descricao, requisitante, responsavel, dataSolicitacao, status, textoResolucao);
+        this.prioridade = prioridade;
+        ListaChamados.add(equipamento, descricao, requisitante, responsavel, dataSolicitacao, status, textoResolucao, prioridade);
     }
 
     public String getTextoResolucao() {
@@ -74,13 +75,19 @@ public class Chamado {
         this.descricao = descricao;
     }
 
-
-
     public void setDataSolicitacao(LocalDateTime dataSolicitacao) {
         this.dataSolicitacao = dataSolicitacao;
     }
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public Prioridade getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(Prioridade prioridade) {
+        this.prioridade = prioridade;
     }
 }
