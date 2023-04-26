@@ -14,7 +14,7 @@ public class ListaChamados {
     }
 
     public static void removeByDescricao(String descricao) {
-        chamadosList.removeIf(chamado -> chamado.getDescricao().equals(descricao));
+        chamadosList.removeIf(chamado -> chamado.getDescricao().equalsIgnoreCase(descricao));
     }
 
     public static void removeByRequisitante(long id) {
@@ -34,7 +34,7 @@ public class ListaChamados {
     }
 
     public static void removeByTextoResolucao(String textoResolucao){
-        chamadosList.removeIf(chamado -> chamado.getTextoResolucao().equals(textoResolucao));
+        chamadosList.removeIf(chamado -> chamado.getTextoResolucao().equalsIgnoreCase(textoResolucao));
     }
 
     // standard methods
