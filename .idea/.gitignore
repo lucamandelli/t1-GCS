@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/intellij-javadocs-4.0.1.xml
+/sonarlint/issuestore/index.pb
+/discord.xml
+/codeStyles/codeStyleConfig.xml
+/sonarlint/securityhotspotstore/index.pb
+/git_toolbox_prj.xml
+/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
