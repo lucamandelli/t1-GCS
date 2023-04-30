@@ -5,10 +5,10 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //objetos pare testes
-        ArrayList<Funcionario> funcionariosSuporte = new ArrayList<>();
+        ArrayList<Funcionario> funcionariosSuporte = new ArrayList<>(); //para instanciar departamento é necessaro o arraylist
         Departamento suporte = new Departamento ("Suporte", funcionariosSuporte);
         ArrayList<Funcionario> funcionariosVendas = new ArrayList<>();
-        Departamento vendas = new Departamento ("Vendas", funcionariosSuporte);
+        Departamento vendas = new Departamento ("Vendas", funcionariosVendas);// para instanciar Funcionario é necessário criar o departamento
         ArrayList<Funcionario> funcionariosRH = new ArrayList<>();
         Departamento RH = new Departamento ("Recursos Humanos", funcionariosRH);
         Funcionario um = new Funcionario((long)001, "Marcelo", suporte, true);
