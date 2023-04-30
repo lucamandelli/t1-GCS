@@ -43,7 +43,5 @@ public class Funcionario {
         this.suporte = suporte;
     }
 
-    
-    
 
 }
