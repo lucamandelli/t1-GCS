@@ -6,6 +6,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         //ESCOLHER FUNCIONARIO ANTES
+        MenuFuncionarios.menuFuncionarios(sc);
         boolean encerrado = false;
         do {
             //SOMENTE FUNCIONARIOS SUPORTE DEVEM TER ACESSO A ALGUMAS FUNCIONALIADADES
