@@ -43,5 +43,11 @@ public class Funcionario {
         this.suporte = suporte;
     }
 
+    @Override
+    public String toString() {
+        return "Funcionario id:" + id + ", nome:" + nome + ", departamento:" + departamento;
+    }
+
+    
 
 }
